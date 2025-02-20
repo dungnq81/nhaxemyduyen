@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Điều Hướng</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="./dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="bg-gray-300">
+
+    <!-- Navbar -->
+    <header class="fixed top-0 w-full items-center justify-between z-50 ">
+        <nav class= "bg-white shadow-md px-8 py-4 flex items-center justify-between sm:flex">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="/assets/image/image14.png" alt="Logo" class="h-12"> <!-- Thay logo.png bằng logo thực -->
+            </div>
+    
+            
+    
+            <!-- Contact & Buttons -->
+            <div class="hidden md:flex flex-wrap items-center space-x-4">
+                <div class="border rounded-full px-4 py-2 flex items-center space-x-2">
+                    <img src="/assets/image/phone.png" alt="">
+                    <span>02862 77 55 44</span>
+                </div>
+                <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600">TRA CỨU VÉ</a>
+                <a href="#" class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600">TRA CỨU ĐƠN HÀNG</a>
+            </div>
+
+            <!--menu button-->
+            <div id="menu-btn" class="md:hidden z-20 ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>                  
+            </div>
+        </nav>
+        
+        
+
+<!-- Menu -->
+<div id="menu"
+  class="hidden md:block bg-white shadow-md px-6 py-4 fixed top-20 left-0 w-full
+        md:flex md:flex-row md:items-center md:justify-between md:pl-20">
+    
+    <ul class="space-y-4 md:space-y-0 md:space-x-10 text-black font-medium flex flex-col md:flex-row">
+        <li><a href="#" class="hover:text-red-500">TRANG CHỦ</a></li>
+
+        <!-- GIỚI THIỆU -->
+        <li id="gioithieu-btn" class="relative cursor-pointer">
+            <a href="#" class="hover:text-red-500 flex items-center">
+                GIỚI THIỆU
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 ml-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </a>
+            <div id="gioithieu" class="invisible w-[194px] bg bg-white fixed top-40">
+                <ul>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">VỀ CHÚNG TÔI</li>
+                    <hr>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">HỆ THỐNG VĂN PHÒNG</li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- DỊCH VỤ -->
+        <li id="dichvu-btn" class="relative cursor-pointer">
+            <a href="#" class="hover:text-red-500 flex items-center">
+                DỊCH VỤ
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 ml-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </a>
+            <div id="dichvu" class="invisible w-[194px] bg bg-white fixed top-40">
+                <ul>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">DỊCH VỤ VẬN TẢI HÀNH KHÁCH</li>
+                    <hr>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">DỊCH VỤ VẬN TẢI HÀNG HÓA</li>
+                </ul>
+            </div>
+        </li>
+
+        <!-- TRA CỨU -->
+        <li id="tracuu-btn" class="relative cursor-pointer">
+            <a href="#" class="hover:text-red-500 flex items-center">
+                TRA CỨU
+                <svg xmlns="http://www.w3.org/2000/svg" class="size-5 ml-1" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>
+            </a>
+            <div id="tracuu" class="invisible w-[194px] bg bg-white fixed top-40">
+                <ul>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">TRA CỨU VÉ</li>
+                    <hr>
+                    <li class="p-2 hover:bg-red-500 hover:text-white">TRA CỨU ĐƠN HÀNG</li>
+                </ul>
+            </div>
+        </li>
+
+        <li><a href="#" class="hover:text-red-500">TIN TỨC</a></li>
+        <li><a href="#" class="hover:text-red-500">LIÊN HỆ</a></li>
+        <li><a href="#" class="hover:text-red-500">TUYỂN DỤNG</a></li>
+    </ul>
+</div>
+
+
+        
+        
+    </header>
+    
+
+     
+    
+
+    <!---banner-->
+
+    <div class="mt-20">
+        
+       <div class=" w-full  bg bg-no-repeat bg-cover md:w-full  md:bg bg-no-repeat bg-cover  "> <img src="/assets/image/banner.png" alt=""></div>
+
+        <!-- form tim ve -->
+        <div class=" relative -top-10 left-1/2 transform -translate-x-1/2 w-full md:w-3/4 bg-white shadow-lg rounded-lg p-4 md:p-6">
+            <div class="flex flex-col md:flex-row ">
+                <!-- //o nhap noi di -->
+                <div class="flex flex-col mb-3">
+                        <div class="flex flex-row">
+                            <img src="/assets/image/location.png" alt="" class="pr-2">
+                        <label class="">Nơi đi</label>
+                        </div>
+                    
+                    <input type="text" placeholder="Nhap noi di" class="">
+                </div>
+                <!-- //o nhap noi di -->
+                <div class=" mb-3">
+                    
+                    <div class="flex flex-row md:flex-row">
+                        <img src="/assets/image/location.png" alt="" class="pr-2">
+                    <label class="">Nơi đến</label>
+                    </div>
+                    <input type="text" placeholder="Nhap noi den" class="">
+                </div>
+                <!-- //o nhap noi di -->
+                <div class=" mb-3">
+                    
+                    <div class="flex flex-row md:flex-row">
+                    <label class="">Ngày đi</label>
+                    </div>
+                    <input type="date" placeholder="" class="">
+                </div>
+                <!-- //o nhap noi di -->
+                <div class=" mb-3">
+                    
+                    <div class="flex flex-col">
+                    <label class="">Ngày đến</label>
+                    <input type="date" placeholder="">
+                    </div>
+                    
+                </div>
+
+                <!-- button tim ve -->
+                <button class="bg-red-500 text-white px-4 py-2 rounded-full hover:bg-red-600 ml-10">
+                    Tim ve xe
+                  </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="sm:w-full ">
+        <div>
+            <h6 class="text-red-500 text-center text-[43px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Dễ Dàng Đặt Vé Trên Website Mỹ Duyên</h6>
+        </div>
+
+        <div class="p-10 flex flex-col md:flex-row w-full gap-4">
+            <div class="bg-blue-500 rounded-lg flex items-center px-6 py-4 w-full md:w-1/2 lg:w-1/4">
+                <img src="/assets/image/banner1.png" alt="" class="w-20 h-16">
+                <div class="flex flex-col text-center pl-3">
+                    <p class="text-white text-lg font-semibold">Tìm kiếm</p>
+                    <p class="text-white text-sm">Chọn thông tin hành trình</p>
+                </div>
+            </div>
+            
+            <div class="bg-green-500 rounded-lg flex items-center px-6 py-4 w-full md:w-1/2 lg:w-1/4">
+                <img src="/assets/image/banner1.png" alt="" class="w-16 h-16">
+                <div class="flex flex-col text-center pl-3">
+                    <p class="text-white text-lg font-semibold">Chọn chuyến</p>
+                    <p class="text-white text-sm">Chọn chuyến phù hợp ấn "Đặt chỗ"</p>
+                </div>
+            </div>
+        
+            <div class="bg-blue-500 rounded-lg flex items-center px-6 py-4 w-full md:w-1/2 lg:w-1/4">
+                <img src="/assets/image/banner1.png" alt="" class="w-16 h-16">
+                <div class="flex flex-col text-center pl-3">
+                    <p class="text-white text-lg font-semibold">Thanh toán</p>
+                    <p class="text-white text-sm">Chọn cổng thanh toán ấn "Thanh toán"</p>
+                </div>
+            </div>
+        
+            <div class="bg-orange-500 rounded-lg flex items-center px-6 py-4 w-full md:w-1/2 lg:w-1/4">
+                <img src="/assets/image/banner1.png" alt="" class="w-16 h-16">
+                <div class="flex flex-col text-center pl-3">
+                    <p class="text-white text-lg font-semibold">Đặt vé</p>
+                    <p class="text-white text-sm">Nhận thông tin vé thành công và lên xe</p>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <h6 class="text-red-500 text-center text-[43px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Lộ trình phổ biến  </h6>
+        </div>
+
+        <!-- dat ve -->
+
+        <div class="flex flex-col gap-x-4 p-10 md:flex-row">
+            <div class="w-286 h-398 border border-gray-300 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all">
+                <img src="/assets/image/bus.png" alt="" class="w-full">
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[14px]">Sai gon</p>
+                    <p class="text-[14px]">Ben tre</p>
+                    </div>
+                    <img src="/assets/image/linengang.png" alt="" >
+                    <p class="text-[14px]">Tu 160.000d</p>
+                </div>
+                <img src="/assets/image/linedoc.png" alt="" class="mb-8">
+                <div class="bg-gray-400 text-center rounded-lg flex flex-row p-2">
+                    <img src="/assets/image/iconbus.png" alt="" class="mr-2">
+                    <h1>LIMOUSINE 34 GIUONG</h1>
+                </div>
+
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[12px]">Thoi gian: 170km</p>
+                    <p class="text-[12px]">Khoang cach: 1h30</p>
+                    </div>
+                    <button class=" bg-red-500 text-white rounded-lg w-20 h-12 ml-5">Đặt vé</button>
+                </div>
+
+            </div>
+
+            <div class="w-286 h-398  border border-gray-300 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all">
+                <img src="/assets/image/bus.png" alt=""  class="w-full">
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[14px]">Sai gon</p>
+                        <p class="text-[14px]">Ben tre</p>  
+                    </div>
+                    <img src="/assets/image/linengang.png" alt="" >
+                    <p class="text-[14px]">Tu 160.000d</p>
+                </div>
+                <img src="/assets/image/linedoc.png" alt="" class="mb-8">
+                <div class="bg-gray-400 text-center rounded-lg flex flex-row p-2">
+                    <img src="/assets/image/iconbus.png" alt="" class="mr-2">
+                    <h1>LIMOUSINE 34 GIUONG</h1>
+                </div>
+
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[12px]">Thoi gian: 170km</p>
+                    <p class="text-[12px]">Khoang cach: 1h30</p>
+                    </div>
+                    <button class=" bg-red-500 text-white rounded-lg w-20 h-12">Đặt vé</button>
+                </div>
+
+            </div>
+
+            <div class="w-286 h-398  border border-gray-300 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all">
+                <img src="/assets/image/bus.png" alt=""  class="w-full">
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[14px]">Sai gon</p>
+                    <p class="text-[14px]">Ben tre</p>
+                    </div>
+                    <img src="/assets/image/linengang.png" alt="" >
+                    <p class="text-[14px]">Tu 160.000d</p>
+                </div>
+                <img src="/assets/image/linedoc.png" alt="" class="mb-8">
+                <div class="bg-gray-400 text-center rounded-lg flex flex-row p-2">
+                    <img src="/assets/image/iconbus.png" alt="" class="mr-2">
+                    <h1>LIMOUSINE 34 GIUONG</h1>
+                </div>
+
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[12px]">Thoi gian: 170km</p>
+                        <p class="text-[12px]">Khoang cach: 1h30</p>
+                    </div>
+                    <button class=" bg-red-500 text-white rounded-lg w-20 h-12">Đặt vé</button>
+                </div>
+
+            </div>
+
+            <div class="w-286 h-398  border border-gray-300 rounded-lg p-4 shadow-lg hover:shadow-xl transition-all">
+                <img src="/assets/image/bus.png" alt=""  class="w-full">
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[14px]">Sai gon</p>
+                    <p class="text-[14px]">Ben tre</p>
+                    </div>
+                    <img src="/assets/image/linengang.png" alt="" >
+                    <p class="text-[14px]">Tu 160.000d</p>
+                </div>
+                <img src="/assets/image/linedoc.png" alt="" class="mb-8">
+                <div class="bg-gray-400 text-center rounded-lg flex flex-row p-2">
+                    <img src="/assets/image/iconbus.png" alt="" class="mr-2">
+                    <h1>LIMOUSINE 34 GIUONG</h1>
+                </div>
+
+                <div class="flex flex-row justify-between p-3">
+                    <div>
+                        <p class="text-[12px]">Thoi gian: 170km</p>
+                        <p class="text-[12px]">Khoang cach: 1h30</p>
+                    </div>
+                    <button class=" bg-red-500 text-white rounded-lg w-20 h-12">Đặt vé</button>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="w-full bg-blue-800 rounded-tl-xl text-center text-white flex flex-row p-5 items-center">
+            <div class="flex flex-col items-center">
+                <h5 class="text-[43px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Cài đặt App đặt vé Mỹ Duyên​</h5>
+                <p class="text-[14px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Cài đặt nhanh ứng dụng để đặt vé từ Sài Gòn – Sóc Trăng ngay hôm nay</p>
+                <h3 class="text-[28px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Tải App và cài đặt</h3>
+                <button class="m-5">
+                    <img src="/assets/image/googleplay.png" alt="">
+                </button>
+                <button class="m-5">
+                    <img src="/assets/image/appstore.png" alt="">   
+                </button>
+            </div>
+    
+            <div class="">
+                <img src="/assets/image/phone2.png" alt="">
+            </div>
+    
+            <div>
+                <img src="/assets/image/phone1.png" alt="">
+            </div>
+        </div>
+    
+        <div>
+            <h6 class="text-red-500 text-center mt-5 text-[43px] text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Dịch vụ hành khách</h6>
+        </div>
+    
+        <div class="flex flex-col md:flex-row gap-x-4 px-6 py-10">
+            <!-- Tiện ích cao cấp -->
+            <div class="text-start flex-1 flex flex-col">
+                <div class="h-60 overflow-hidden">
+                    <img src="/assets/image/dichvu1.png" alt="Tiện ích cao cấp" class="rounded-lg w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl font-semibold mt-4 text-[25px]">Tiện ích cao cấp</h1>
+                <p class="text-gray-700 mt-2 text-[14px] flex-grow">
+                    Mỹ Duyên có quy mô xe lớn, hệ thống dòng xe limousine đời mới, hiện đại trên tuyến. 
+                    Đem lại sự sang trọng và đầy đủ tiện ích như ghế nằm, nước uống, máy lạnh...
+                </p>
+                <div class="w-1/2 h-[2px] bg-red-500 mt-2"></div>
+                <ul class="mt-2 text-gray-600 space-y-2">
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Nội thất đẹp và hiện đại.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Phục vụ nước uống và wifi.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Xe được vệ sinh sạch sẽ sau mỗi chuyến.</li>
+                </ul>
+            </div>
+        
+            <!-- Đáp ứng mọi khung giờ -->
+            <div class="text-start flex-1 flex flex-col">
+                <div class="h-60 overflow-hidden">
+                    <img src="/assets/image/dichvu2.png" alt="Đáp ứng mọi khung giờ" class="rounded-lg w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl font-semibold mt-4 text-[25px]">Đáp ứng mọi khung giờ</h1>
+                <p class="text-gray-700 mt-2 text-[14px] flex-grow">
+                    Mỹ Duyên cung cấp khung giờ hợp lý. Tổng đài luôn sẵn sàng hỗ trợ khách hàng, 
+                    đảm bảo sự tiện lợi và thoải mái.
+                </p>
+                <div class="w-1/2 h-[2px] bg-red-500 mt-2"></div>
+                <ul class="mt-2 text-gray-600 space-y-2">
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Đáp ứng nhiều khung giờ linh hoạt.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Hoạt động từ 4h sáng - 24h hàng ngày.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Hotline hỗ trợ: 02862 77 55 44.</li>
+                </ul>
+            </div>
+        
+            <!-- Dịch vụ đẳng cấp -->
+            <div class="text-start flex-1 flex flex-col">
+                <div class="h-60 overflow-hidden">
+                    <img src="/assets/image/dichvu1.png" alt="Dịch vụ đẳng cấp" class="rounded-lg w-full h-full object-cover">
+                </div>
+                <h1 class="text-xl font-semibold mt-4 text-[25px]">Dịch vụ đẳng cấp</h1>
+                <p class="text-gray-700 mt-2 text-[14px] flex-grow">
+                    Đội ngũ nhân viên phục vụ chuyên nghiệp. Chất lượng dịch vụ là danh dự của Mỹ Duyên.
+                </p>
+                <div class="w-1/2 h-[2px] bg-red-500 mt-2"></div>
+                <ul class="mt-2 text-gray-600 space-y-2">
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Điểm đón trả linh hoạt.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Nhân viên đào tạo chuyên nghiệp.</li>
+                    <li class="flex items-center text-[14px]"><img src="/assets/image/tick.png" class="mr-2" alt=""> Thanh toán linh hoạt qua nhiều hình thức.</li>
+                </ul>
+            </div>
+        </div>
+        
+    
+        <div class="bg-red-700 text-white py-10 px-5">
+            <h2 class="text-center text-3xl font-bold mb-8">Dịch vụ hàng hóa</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <!-- Bồi thường thất lạc -->
+                <div class="bg-red-700 p-6  text-center border border-white">
+                    <img src="/assets/image/boithuong.png" alt="Bồi thường" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Bồi thường thất lạc</h3>
+                    <p>Khách hàng sẽ nhận bồi thường khi hàng hóa bị mất, thiếu hoặc hỏng hóc.</p>
+                </div>
+                
+                <!-- Giao hàng hóa tốc -->
+                <div class="bg-red-700 p-6  text-center border border-white">
+                    <img src="/assets/image/hoatoc.png" alt="Giao hàng nhanh" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Giao hàng hóa tốc</h3>
+                    <p>Đảm bảo giao hàng nhanh chóng trong khu vực nội thành Sài Gòn và Sóc Trăng.</p>
+                </div>
+                
+                <!-- Thu hộ COD -->
+                <div class="bg-red-700 p-6 text-center border border-white">
+                    <img src="/assets/image/cod.png" alt="Thu hộ COD" class="mx-auto w-16 h-16 mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Thu hộ COD</h3>
+                    <p>Nhận thu hộ (COD) cho hàng hóa chuyển phát, chuyển tiền trong ngày.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div>
+            <h6 class="text-red-500 text-center text-[43px]">Hình ảnh nhà xe</h6>
+        </div>
+    
+        <div class="grid grid-flow-col auto-rows-max m-5">
+            <div class="w-211 h-154"><img src="/assets/image/image.png" alt=""></div>
+            <div class="w-211 h-154"><img src="/assets/image/image (1).png" alt=""></div>
+            <div class="w-211 h-154"><img src="/assets/image/image (2).png" alt=""></div>
+            <div class="w-211 h-154"><img src="/assets/image/image (3).png" alt=""></div>
+            <div class="w-211 h-154"><img src="/assets/image/image (4).png" alt=""></div>
+        </div>
+    
+        <div class="bg-gray-100 p-6  shadow-lg  flex flex-col md:flex-row gap-6 items-center">
+            <div class="flex-shrink-0">
+                <img src="/assets/image/hotline.png" alt="Hotline" class="w-657 h-549">
+            </div>
+            <div>
+                <h1 class="text-2xl font-bold text-red-500 mb-5">Hotline Dịch vụ</h1>
+                <p class="text-gray-700  mb-5">Hotline dịch vụ của Mỹ Duyên hoạt động 24/7. Chúng tôi luôn sẵn sàng phục vụ khách hàng.</p>
+               <div class="flex flex-row  mb-5">
+                <div  class="rounded-full bg-blue-700 w-6 p-1 mr-2">
+                    <img src="/assets/image/phonewhite.png" alt="">
+                </div>
+                <p class="text-gray-700 font-medium"> Hotline đặt vé: 1900 6746 <span class="font-bold">1900 6746</span></p>
+               </div>
+               <div class="flex flex-row  mb-5">
+                <div  class="rounded-full bg-blue-700 w-6 p-1 mr-2">
+                    <img src="/assets/image/phonewhite.png" alt="">
+                </div>
+                <p class="text-gray-700 font-medium"> Hotline gửi hàng: 1900 0257 <span class="font-bold">1900 6746</span></p>
+               </div>
+               <div class="flex flex-row  mb-5">
+                <div  class="rounded-full bg-blue-700 w-6 p-1 mr-2">
+                    <img src="/assets/image/phonewhite.png" alt="">
+                </div>
+                <p class="text-gray-700 font-medium"> Chăm sóc khách hàng: 1900 6746 <span class="font-bold">1900 6746</span></p>
+               </div>
+               <div class="flex flex-row  mb-5">
+                <div  class="rounded-full bg-blue-700 w-6 p-1 mr-2">
+                    <img src="/assets/image/phonewhite.png" alt="">
+                </div>
+                <p class="text-gray-700 font-medium"> Xử lý khiếu nại: 02439 937 099 <span class="font-bold">1900 6746</span></p>
+               </div>
+            </div>
+        </div>
+    </div>
+
+    <h1 class="text-red-500 text-[25px] text-center mt-12">Tin tức nổi bật</h1>
+
+    <div class="flex flex-col mt-5 p-10 md:flex-row">
+        <div>
+            <img src="/assets/image/bus2.png" alt="">
+            <h1 class="text-blue-700">THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</h1>
+            <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành công nghiệp điện, cơ sở phát triển nền công nghiệp hiện đại.</p>
+        </div>
+
+        <div class="grid grid-rows-3 mt-10">
+            <div class="flex flex-row mb-5 justify-between">
+                <img src="/assets/image/tintuc1.png" alt="">
+                <div class="ml-5">
+                    <h1 class="text-blue-700">THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</h1>
+                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                </div>
+            </div>
+            <div class="flex flex-row mb-5 justify-between">
+                <img src="/assets/image/tintuc2.png" alt="">
+                <div class="ml-5">
+                    <h1 class="text-blue-700">THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</h1>
+                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                </div>
+            </div>
+            <div class="flex flex-row mb-5 justify-between">
+                <img src="/assets/image/tintuc3.png" alt="">
+                <div class="ml-5">
+                    <h1 class="text-blue-700">THAN ĐÁ VÀ VAI TRÒ TRONG NGÀNH CÔNG NGHIỆP ĐIỆN</h1>
+                    <p>Than đá là một nguồn năng lượng quan trọng trong cơ cấu sử dụng năng lượng của Việt Nam, đặc biệt là ngành...</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+<footer>
+    <div class="bg-red-700 w-full ">
+        <div class="grid grid-cols-3 m-10 p-10 text-white">
+            <div >
+                <img src="/assets/image/image14.png" alt="" class="md:mb-5 mb-10">
+                <h1 class="md:mb-5 md:text-[18px] mb-5 text-[18px]">CÔNG TY TNHH VẬN CHUYỂN HÀNH KHÁCH MỸ DUYÊN</h1>
+                <p class="mb-5">Giấy chứng nhận đăng ký DN số 0300993856</p>
+                <p class="mb-5">Đại diện: Nguyễn Thị Mỹ Duyên</p>
+                <p class="mb-5">Liên hệ</p>
+                <p class="mb-5">Email: xekhachmyduyen0309@gmail.com</p>
+                <p class="mb-5">Tổng đài: 02862 77 55 44 – 0903 861 192</p>
+
+                <div class="flex flex-row items-center">
+                    <div class="bg-green-500 w-6 mr-2">
+                        <img src="/assets/image/facebook.png" alt="" class="p-2">
+                    </div>
+                    <div class="bg-green-500 w-6 mr-2">
+                        <img src="/assets/image/youtube.png" alt="" class="p-2">
+                    </div>
+                    <div class="bg-green-500 w-6 mr-2">
+                        <img src="/assets/image/ins.png" alt="" class="p-2">
+                    </div>
+                    <div class="bg-green-500 w-6 mr-2">
+                        <img src="/assets/image/zalo.png" alt="" class="p-2">
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="ml-10">
+                <h1 class="mb-5  text-[18px]">Khách hàng</h1>
+                <ul class="mb-5">
+                    <li class="mb-5">Đặt vé online</li>
+                    <li class="mb-5">Kiểm tra vé</li>
+                    <li class="mb-5">Tra cứu đơn hàng</li>
+                    <li class="mb-5">Chính sách vận chuyển</li>
+                    <li class="mb-5">Chính sách thanh toán</li>
+                    <li class="mb-5">Chính sách hủy vé/đổi trả</li>
+                    <li class="mb-5">Chính sách bảo mật thông tin</li>
+                    <li class="mb-5">Chính sách bảo mật thanh toán</li>
+                    <li class="mb-5"    >Chính sách xử lý khiếu nại</li>
+                </ul>
+            </div>
+            <div class="mb-5">
+                <h1 class=" text-[18px]">Tại Sóc Trăng</h1>
+                <ul class="mb-5">
+                    <li class="mb-5">Trụ sở: Bến xe Trần Đề 1/5, Thị trấn Trần Đề, Trần Đề</li>
+                    <li class="mb-5">VP Sóc Trăng: 38 Lê Duẩn, P. 3
+                    </li>
+                    <li class="mb-5">VP Long Phú: Ấp 14, đường Đoàn Thế Trung, TT. Long Phú</li>
+                    <li class="mb-5">VP Mỹ Tú: 170 ấp Ngoại Ô, TT. Huỳnh Hữu Nghĩa</li>
+                    <li class="mb-5">VP Đại Ngãi: Ấp Phụng Tường 2, Xã Long Phụng, Huyện Long Phú</li>
+                    <li class="mb-5"><h1 class=" text-[18px]">Tại Hậu Giang</h1></li>
+                    <li class="mb-5">VP Ngã Bảy: Đường 3/2, Khu Vực 5, Phường Ngã Bảy, TP. Ngã Bảy</li>
+                    <li class="mb-5"><h1 class=" text-[18px]">Tại Cần Thơ</h1></li>
+                    <li class="mb-5">Bến xe Cần Thơ: 91B Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ</li>
+                    <li class="mb-5"><h1 class=" text-[18px]">Tại Sài Gòn</h1></li>
+                    <li class="mb-5">Bến xe Miền Tây: Phòng vé 16395 Kinh Dương Vương, P. An Lạc, Q. Bình Tân</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="bg-red-500 p-10">
+            <div class="flex flex-row justify-between text-white">
+                <p>Copyright © 2024 My Duyen. Powered by HD Agency</p>
+                <p>Website Terms of Use | Privacy policy</p>
+            </div>
+        </div>
+    </div>
+
+    
+</footer>
+</html>
