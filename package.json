@@ -1,7 +1,30 @@
 {
   "dependencies": {
-    "@tailwindcss/vite": "^4.0.7",
+    "@tailwindcss/cli": "^4.0.7",
+    "@tailwindcss/postcss": "^4.0.7",
+    "@tailwindcss/vite": "^4.0.7"
+  },
+  "name": "nhaxemyduyen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dungnq81/nhaxemyduyen.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dungnq81/nhaxemyduyen/issues"
+  },
+  "homepage": "https://github.com/dungnq81/nhaxemyduyen#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
     "tailwindcss": "^4.0.7"
   }
-
 }
