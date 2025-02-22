@@ -40,9 +40,11 @@ dots.forEach((dot, index) => {
 });
 
 function updateSlide() {
+  currentSlide=(currentSlide+1)%totalSlides;
   slides.style.transform = `translateX(-${currentSlide * 100}%)`;
   updateDots();
 }
+setInterval(updateSlide,5000);
 
 // Cập nhật dấu chấm đang được chọn
 function updateDots() {
