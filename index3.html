@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>4 Slide Demo</title>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+  <div class="w-full max-w-xl p-4 bg-white rounded-2xl shadow-lg">
+    <div id="carousel" class="relative overflow-hidden">
+      <div id="slides" class="flex transition-transform duration-500">
+        <!-- Slide 1 -->
+        <div class="min-w-full p-4 space-y-2">
+          <h2 class="text-xl font-bold">Slide 1</h2>
+          <ul class="list-disc pl-5 flex flex-row">
+            <li>Info 1</li>
+            <li>Info 2</li>
+            <li>Info 3</li>
+            <li>Info 4</li>
+          </ul>
+        </div>
+        <!-- Slide 2 -->
+        <div class="min-w-full p-4 space-y-2">
+          <h2 class="text-xl font-bold">Slide 2</h2>
+          <ul class="list-disc pl-5">
+            <li>Data A</li>
+            <li>Data B</li>
+            <li>Data C</li>
+            <li>Data D</li>
+          </ul>
+        </div>
+        <!-- Slide 3 -->
+        <div class="min-w-full p-4 space-y-2">
+          <h2 class="text-xl font-bold">Slide 3</h2>
+          <ul class="list-disc pl-5">
+            <li>Fact 1</li>
+            <li>Fact 2</li>
+            <li>Fact 3</li>
+            <li>Fact 4</li>
+          </ul>
+        </div>
+        <!-- Slide 4 -->
+        <div class="min-w-full p-4 space-y-2">
+          <h2 class="text-xl font-bold">Slide 4</h2>
+          <ul class="list-disc pl-5">
+            <li>Detail 1</li>
+            <li>Detail 2</li>
+            <li>Detail 3</li>
+            <li>Detail 4</li>
+          </ul>
+        </div>
+      </div>
+      <!-- Navigation Buttons -->
+      <div class="flex justify-between mt-4">
+        <button id="prevBtn" class="px-4 py-2 bg-blue-500 text-white rounded-xl">Previous</button>
+        <button id="nextBtn" class="px-4 py-2 bg-blue-500 text-white rounded-xl">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const totalSlides = 4;
+    let currentSlide = 0;
+
+    document.getElementById('nextBtn').addEventListener('click', () => {
+      if (currentSlide < totalSlides - 1) {
+        currentSlide++;
+      } else {
+        currentSlide = 0;
+      }
+      updateSlide();
+    });
+
+    document.getElementById('prevBtn').addEventListener('click', () => {
+      if (currentSlide > 0) {
+        currentSlide--;
+      } else {
+        currentSlide = totalSlides - 1;
+      }
+      updateSlide();
+    });
+
+    function updateSlide() {
+      slides.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+  </script>
+</body>
+</html>
