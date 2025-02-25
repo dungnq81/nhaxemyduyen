@@ -5,6 +5,7 @@ gioithieuButton.addEventListener("click",()=>{
     gioithieu.classList.toggle("invisible");
 })
 
+
 // dich vu
 const dichvu=document.querySelector("#dichvu");
 const dichvuButton=document.querySelector("#dichvu-btn");
@@ -61,3 +62,56 @@ function updateDots() {
 
 // Đặt slide đầu tiên được chọn khi tải trang
 updateDots();
+
+//slidenews
+const slidesnews = document.getElementById('slidesnews');
+const pagenews = document.querySelectorAll('.page');
+const prevSlide = document.getElementById('prevSlide');
+const nextSlide = document.getElementById('nextSlide');
+const totalSlidesnews = 4;
+let currentSlidenews = 0;
+
+// Bắt sự kiện khi nhấn vào nút prev
+prevSlide.addEventListener('click', () => {
+  currentSlidenews = currentSlidenews > 0 ? currentSlidenews - 1 : totalSlidesnews - 1;
+  updateSlidenews();
+});
+
+// Bắt sự kiện khi nhấn vào nút next
+nextSlide.addEventListener('click', () => {
+  currentSlidenews = currentSlidenews < totalSlidesnews - 1 ? currentSlidenews + 1 : 0;
+  updateSlidenews();
+});
+
+// bắt sự kiện khi nhấn vào trang
+pagenews.forEach((page, index) => {
+  page.addEventListener('click', () => {
+    currentSlidenews = index;
+    updateSlidenews();
+  });
+});
+
+function updateSlidenews() {
+  slidesnews.style.transform = `translateX(-${currentSlidenews * 100}%)`;
+  updatePagenews();
+}
+
+// Cập nhật trang đang được chọn
+function updatePagenews() {
+  pagenews.forEach((page, index) => {
+    if (index === currentSlidenews) {
+      page.classList.add('bg-green-500');
+      page.classList.add('text-white');
+      page.classList.remove('bg-gray-400');
+      page.classList.remove('text-black');
+    } else {
+      page.classList.add('bg-gray-400');
+      page.classList.add('text-black');
+      page.classList.remove('text-white');
+      page.classList.remove('bg-green-500');
+    }
+  });
+}
+
+// Đặt slide đầu tiên được chọn khi tải trang
+updateSlidenews();

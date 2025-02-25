@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HỆ THỐNG VĂN PHÒNG</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="./dist/output.css" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<!--header-->
+<header class="bg-white w-full items-center h-[150px] fixed z-20 top-0">
+  <!--logo-->
+  <nav class=" flex justify-between items-center p-5">
+
+    <div><img src="./assets/image/image14.png" alt=""></div>
+    <div class="hidden flex md:flex row items-center">
+      <p class="border border-black rounded-full p-2 mr-2 flex flex-row"><svg xmlns="http://www.w3.org/2000/svg"
+          fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+        </svg>
+        02862 77 56 44</p>
+      <button type="button" class="md:bg-red-500 text-white rounded-full p-2 mr-2">TRA CỨU VÉ</button>
+      <button type="button" class="md:bg-red-500 text-white rounded-full p-2 ">TRA CỨU ĐƠN HÀNG</button>
+    </div>
+
+    <!--menu button-->
+    <div id="menu-btn" class="md:hidden z-20 cursor-pointer">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+        class="size-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+    </div>
+  </nav>
+
+
+  <!--menu-->
+  <div id="menu" class="ml-20 mr-20 ">
+    <ul class="flex flex-col md:flex-row md:justify-between font-semibold">
+      <li class="mb-10"><a href="index.html" class="hover:text-red-500">TRANG CHỦ</a></li>
+      <li class="mb-10 ">
+        <div class="relative inline-block text-left">
+          <div>
+            <button type="button" class="flex flex-row hover:text-red-500" id="gioithieu-btn" aria-expanded="true"
+              aria-haspopup="true">
+              GIỚI THIỆU
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+            id="gioithieu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+              <a href="aboutus.html" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500" role="menuitem"
+                tabindex="-1" id="menu-item-0">VỀ CHÚNG TÔI</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                tabindex="-1" id="menu-item-1">HỆ THỐNG VĂN PHÒNG</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mb-10 ">
+        <div class="relative inline-block text-left">
+          <div>
+            <button type="button" class="flex flex-row hover:text-red-500" id="dichvu-btn" aria-expanded="true"
+              aria-haspopup="true">
+              DỊCH VỤ
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+            id="dichvu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+              <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500" role="menuitem"
+                tabindex="-1" id="menu-item-0">DỊCH VỤ VẬN TẢI HÀNH KHÁCH</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                tabindex="-1" id="menu-item-1">DỊCH VỤ VẬN TẢI HÀNG HÓA</a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mb-10 ">
+        <div class="relative inline-block text-left">
+          <div>
+            <button type="button" class="flex flex-row hover:text-red-500" id="tracuu-btn" aria-expanded="true"
+              aria-haspopup="true">
+              TRA CỨU
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-6 ml-2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+            id="tracuu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+            <div class="py-1" role="none">
+              <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
+              <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500" role="menuitem"
+                tabindex="-1" id="menu-item-0">TRA CỨU VÉ</a>
+              <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                tabindex="-1" id="menu-item-1">TRA CỨU ĐƠN </a>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="mb-10 ">
+        <a href="" class="hover:text-red-500">TIN TỨC</a>
+      </li>
+      <li class="mb-10 ">
+        <a href="" class="hover:text-red-500">LIÊN HỆ</a>
+      </li>
+      <li class="flex flex-row mb-10 ">
+        <a href="" class="hover:text-red-500">TUYỂN DỤNG</a>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+          class="size-6 ml-2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+        </svg>
+
+      </li>
+    </ul>
+  </div>
+</header>
+
+<body class="bg-[#F9F6EF]">
+
+  <!--banner-->
+  <div
+    class="relative translate-y-20 mt-10 w-full h-[481px] bg-[url('./assets/image/banneraboutus.png')] object-cover bg-center z-10 ">
+    <div class="absolute top-0 left-0 w-full h-full bg-black opacity-50 z-0"></div>
+    <div class="absolute top-1/3 translate-x-1/4 z-10 text-white font-semibold">
+      <p class="md:text-[45px]">VỀ CHÚNG TÔI</p>
+      <div class="flex flex-row mt-5">
+        <p class="md:text-[20px]">Trang chủ</p>
+        <p>\</p>
+        <p class="md:text-[20px] font-semibold">Về chúng tôi</p>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!--body-->
+  <div class="flex flex-col bg-[#F9F6EF] p-10">
+    <div class="flex flex-col items-center p-10">
+      <h1 class="text-red-500 font-semibold text-[43px]">Hệ thống văn phòng</h1>
+      <p class="text-[14px] text-center w-[540px]">Mỹ Duyên có văn phòng thuận tiện trên các khu vực xe chạy qua, có thể
+        nhận vé và nhận hàng chuyển phát giữa sóc trăng-sài gòn</p>
+      <div class="flex md:flex-row mt-5">
+
+        <!--noi dung-->
+        <div class="text-[14px] text-justify mr-5 w-1/2">
+          <p class="text-[#000000] text-[22px] font-semibold">Tại Sóc Trăng:</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">Bến xe Trần Đề : 1/5, Thị trấn
+            Trần Đề, Trần Đề – 02996 512 512</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">VP Sóc Trăng: 38 Lê Duẩn, Phường
+            3 – 02996 51 51 51rấn</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">VP Long Phú: Ấp 14, đường Đoàn
+            Thế Trung, Thị trấn Long Phú – 0942 909 600 1/5, Thị trấn</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">VP Mỹ Tú: 170 ấp Ngoại Ô, Thị
+            trấn Huỳnh Hữu Nghĩa – 02996 57 57 57</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">VP Đại Ngãi: Ấp Phụng Tường 2,
+            Xã Long Phụng, Huyện Long Phú –  02996 50 50 50</p>
+          <p class="text-[#000000] text-[22px] font-semibold">Tại Hậu Giang:</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">VP Ngã Bảy: Đường 3/2, Khu Vực
+            5, Phường Ngã Bảy, TP. Ngã Bảy – 0293 629 7676</p>
+          <p class="text-[#000000] text-[22px] font-semibold">Tại Cần Thơ:</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">Bến xe Cần Thơ: 91B Nguyễn Văn
+            Linh, Hưng Lợi, Ninh Kiều</p>
+          <p class="text-[#000000] text-[22px] font-semibold">Tại Sài Gòn:</p>
+          <p class="mb-5 flex flex-row"><img src="./assets/image/iconoffice.png" alt="">Bến xe Miền Tây: Phòng vé số 16,
+            395 Kinh Dương Vương, Phường An Lạc, Quận Bình Tân – 02862 77 55 44, 0903 861 192</p>
+        </div>
+        <!--hinh anh-->
+        <div class="w-1/2 h-[510px]">
+          <img src="./assets/image/banner.png" alt="" class="w-full h-full rounded-md ">
+        </div>
+
+      </div>
+    </div>
+
+
+    <!--banner content-->
+    <div>
+      <img src="./assets/image/bus.png" alt="" class="w-[1200px] h-[676px] rounded-2xl">
+    </div>
+
+    <!--content-->
+    <div class="mt-2 text-justify text-[13px]">
+      <p class="flex flex-row mb-2"><img src="./assets/image/phone.png" alt="" class="mr-2">Hotline tư vấn và đặt
+        vé: 02862 77 55 44 – 0903 861 192 – 02996 512 512</p>
+      <p class="flex flex-row mb-2"><img src="./assets/image/time.png" alt="" class="mr-2">Thời gian hoạt động: Từ 4h
+        sáng đến 24h hàng ngày</p>
+      <p class="flex flex-row"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="size-6 mr-2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+            d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+        </svg>
+        HotWebsite: <a href="nhaxemyduyen.com"></a> nhaxemyduyen.com</p>
+
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+<footer>
+  <div class="bg-red-700 w-full">
+    <div class="grid grid-cols-3 md:grid md:grid-cols-3 m-10 p-10 text-white">
+      <div>
+        <img src="/assets/image/image14.png" alt="" class="md:mb-5 mb-10">
+        <p class="md:mb-5 md:text-[18px] mb-5 text-[18px]">CÔNG TY TNHH VẬN CHUYỂN HÀNH KHÁCH MỸ DUYÊN</p>
+        <p class="mb-5">Giấy chứng nhận đăng ký DN số 0300993856</p>
+        <p class="mb-5">Đại diện: Nguyễn Thị Mỹ Duyên</p>
+        <p class="mb-5">Liên hệ</p>
+        <p class="mb-5 flex flex-col">Email: xekhachmyduyen0309@gmail.com</p>
+        <p class="mb-5">Tổng đài: 02862 77 55 44 – 0903 861 192</p>
+
+        <div class="flex flex-row items-center">
+          <div class="bg-green-500 w-5 mr-2">
+            <img src="/assets/image/facebook.png" alt="" class="p-2">
+          </div>
+          <div class="bg-green-500 w-6 mr-2">
+            <img src="/assets/image/youtube.png" alt="" class="p-2">
+          </div>
+          <div class="bg-green-500 w-6 mr-2">
+            <img src="/assets/image/ins.png" alt="" class="p-2">
+          </div>
+          <div class="bg-green-500 w-6 mr-2">
+            <img src="/assets/image/zalo.png" alt="" class="p-2">
+          </div>
+
+        </div>
+      </div>
+      <div class="ml-10">
+        <h1 class="mb-5  text-[18px]">Khách hàng</h1>
+        <ul class="mb-5">
+          <li class="mb-5">Đặt vé online</li>
+          <li class="mb-5">Kiểm tra vé</li>
+          <li class="mb-5">Tra cứu đơn hàng</li>
+          <li class="mb-5">Chính sách vận chuyển</li>
+          <li class="mb-5">Chính sách thanh toán</li>
+          <li class="mb-5">Chính sách hủy vé/đổi trả</li>
+          <li class="mb-5">Chính sách bảo mật thông tin</li>
+          <li class="mb-5">Chính sách bảo mật thanh toán</li>
+          <li class="mb-5">Chính sách xử lý khiếu nại</li>
+        </ul>
+      </div>
+      <div class="mb-5">
+        <h1 class=" text-[18px]">Tại Sóc Trăng</h1>
+        <ul class="mb-5">
+          <li class="mb-5">Trụ sở: Bến xe Trần Đề 1/5, Thị trấn Trần Đề, Trần Đề</li>
+          <li class="mb-5">VP Sóc Trăng: 38 Lê Duẩn, P. 3
+          </li>
+          <li class="mb-5">VP Long Phú: Ấp 14, đường Đoàn Thế Trung, TT. Long Phú</li>
+          <li class="mb-5">VP Mỹ Tú: 170 ấp Ngoại Ô, TT. Huỳnh Hữu Nghĩa</li>
+          <li class="mb-5">VP Đại Ngãi: Ấp Phụng Tường 2, Xã Long Phụng, Huyện Long Phú</li>
+          <li class="mb-5">
+            <h1 class=" text-[18px]">Tại Hậu Giang</h1>
+          </li>
+          <li class="mb-5">VP Ngã Bảy: Đường 3/2, Khu Vực 5, Phường Ngã Bảy, TP. Ngã Bảy</li>
+          <li class="mb-5">
+            <h1 class=" text-[18px]">Tại Cần Thơ</h1>
+          </li>
+          <li class="mb-5">Bến xe Cần Thơ: 91B Nguyễn Văn Linh, Hưng Lợi, Ninh Kiều, Cần Thơ</li>
+          <li class="mb-5">
+            <h1 class=" text-[18px]">Tại Sài Gòn</h1>
+          </li>
+          <li class="mb-5">Bến xe Miền Tây: Phòng vé 16395 Kinh Dương Vương, P. An Lạc, Q. Bình Tân</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="bg-red-500 p-10">
+      <div class="flex flex-row justify-between text-white">
+        <p>Copyright © 2024 My Duyen. Powered by HD Agency</p>
+        <p>Website Terms of Use | Privacy policy</p>
+      </div>
+    </div>
+  </div>
+
+
+</footer>
+
+</html>
