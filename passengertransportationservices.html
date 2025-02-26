@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 
+<!-- Navbar -->
 <!--header-->
 <header class="bg-white w-full items-center h-[150px] fixed z-20 top-0">
     <!--logo-->
@@ -22,8 +23,14 @@
                         d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
                 </svg>
                 02862 77 56 44</p>
-            <button type="button" class="md:bg-red-500 text-white rounded-full p-2 mr-2">TRA CỨU VÉ</button>
-            <button type="button" class="md:bg-red-500 text-white rounded-full p-2 ">TRA CỨU ĐƠN HÀNG</button>
+            <button type="button"
+                class="md:bg-red-500 hover:transition duration-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 text-white rounded-full p-2 mr-2"><a
+                    href="ticketlookup.html">TRA
+                    CỨU VÉ</a></button>
+            <button type="button"
+                class="md:bg-red-500 hover:transition duration-500 hover:-translate-y-1 hover:scale-110 hover:bg-red-500 text-white rounded-full p-2 "><a
+                    href="tracuudonhang.html">TRA
+                    CỨU ĐƠN HÀNG</a></button>
         </div>
 
         <!--menu button-->
@@ -37,8 +44,8 @@
 
 
     <!--menu-->
-    <div id="menu" class="ml-20 mr-20 ">
-        <ul class="flex flex-col md:flex-row md:justify-between font-semibold">
+    <div id="menu" class="bg-white">
+        <ul class=" flex flex-col md:ml-20 md:mr-20 md:flex-row md:justify-between font-semibold">
             <li class="mb-10"><a href="index.html" class="hover:text-red-500">TRANG CHỦ</a></li>
             <li class="mb-10 ">
                 <div class="relative inline-block text-left">
@@ -52,15 +59,16 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden shadow-md duration-500 "
                         id="gioithieu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
                         tabindex="-1">
                         <div class="py-1" role="none">
                             <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
                             <a href="aboutus.html" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500"
                                 role="menuitem" tabindex="-1" id="menu-item-0">VỀ CHÚNG TÔI</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 "
-                                role="menuitem" tabindex="-1" id="menu-item-1">HỆ THỐNG VĂN PHÒNG</a>
+                            <a href="officesystem.html"
+                                class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                                tabindex="-1" id="menu-item-1">HỆ THỐNG VĂN PHÒNG</a>
                         </div>
                     </div>
                 </div>
@@ -77,14 +85,16 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden shadow-md duration-500"
                         id="dichvu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                         <div class="py-1" role="none">
                             <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
-                            <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500"
-                                role="menuitem" tabindex="-1" id="menu-item-0">DỊCH VỤ VẬN TẢI HÀNH KHÁCH</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 "
-                                role="menuitem" tabindex="-1" id="menu-item-1">DỊCH VỤ VẬN TẢI HÀNG HÓA</a>
+                            <a href="passengertransportationservices.html"
+                                class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500" role="menuitem"
+                                tabindex="-1" id="menu-item-0">DỊCH VỤ VẬN TẢI HÀNH KHÁCH</a>
+                            <a href="freightservices.html"
+                                class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                                tabindex="-1" id="menu-item-1">DỊCH VỤ VẬN TẢI HÀNG HÓA</a>
                         </div>
                     </div>
                 </div>
@@ -101,26 +111,28 @@
                             </svg>
                         </button>
                     </div>
-                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden"
+                    <div class="invisible absolute left-5 z-10 mt-2 w-56 origin-top-right rounded-md bg-white ring-1 shadow-lg ring-black/5 focus:outline-hidden shadow-md duration-500"
                         id="tracuu" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
                         <div class="py-1" role="none">
                             <!-- Active: "bg-gray-100 text-gray-900 outline-hidden", Not Active: "text-gray-700" -->
-                            <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500"
-                                role="menuitem" tabindex="-1" id="menu-item-0">TRA CỨU VÉ</a>
-                            <a href="#" class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 "
-                                role="menuitem" tabindex="-1" id="menu-item-1">TRA CỨU ĐƠN </a>
+                            <a href="ticketlookup.html"
+                                class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500" role="menuitem"
+                                tabindex="-1" id="menu-item-0">TRA CỨU VÉ</a>
+                            <a href="tracuudonhang.html"
+                                class="block px-4 py-2 text-sm hover:text-white hover:bg-red-500 " role="menuitem"
+                                tabindex="-1" id="menu-item-1">TRA CỨU ĐƠN </a>
                         </div>
                     </div>
                 </div>
             </li>
             <li class="mb-10 ">
-                <a href="" class="hover:text-red-500">TIN TỨC</a>
+                <a href="news.html" class="hover:text-red-500">TIN TỨC</a>
             </li>
             <li class="mb-10 ">
-                <a href="" class="hover:text-red-500">LIÊN HỆ</a>
+                <a href="lienhe.html" class="hover:text-red-500">LIÊN HỆ</a>
             </li>
             <li class="flex flex-row mb-10 ">
-                <a href="" class="hover:text-red-500">TUYỂN DỤNG</a>
+                <a href="tuyendung.html " class="hover:text-red-500">TUYỂN DỤNG</a>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-6 ml-2">
                     <path stroke-linecap="round" stroke-linejoin="round"
